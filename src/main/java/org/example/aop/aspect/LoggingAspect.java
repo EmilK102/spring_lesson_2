@@ -12,4 +12,14 @@ public class LoggingAspect {
     public void beforeGetBookAdvice(){
         System.out.println("!Before get Book method!");
     }
+
+    @Before("execution(public void get*())")
+    public void beforeGetAdvice(){
+        System.out.println("!beforeGetAdvice!");
+    }
+
+    @Before("execution(public void returnBook())")
+    public void beforeReturnBookAdvice(){
+        System.out.println("!beforeReturnBookAdvice!");
+    }
 }
