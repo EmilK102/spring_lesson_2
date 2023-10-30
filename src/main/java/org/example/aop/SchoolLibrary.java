@@ -8,8 +8,26 @@ public class SchoolLibrary extends abstractLibrary{
     public void getBook() {
         System.out.println("getBook from SchoolLibrary");
     }
+    @Override
+    public void getMagazine(){
+        System.out.println("getMagazine from SchoolLibrary");
+    }
+    @Override
+    public void returnBook(){
+        System.out.println("returnBook from SchoolLibrary");
+    }
+    @Override
+    public void returnMagazine(){
+        System.out.println("returnMagazine from SchoolLibrary");
+    }
 
-    public void getMoney(){
-        System.out.println("getMoney from SchoolLibrary");
+    @Override
+    public void addBook() {
+        System.out.println("addBook from SchoolLibrary");
+    }
+
+    @Override
+    public void addMagazine() {
+        System.out.println("addMagazine from SchoolLibrary");
     }
 }
