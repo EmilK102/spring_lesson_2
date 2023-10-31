@@ -10,7 +10,8 @@ import org.springframework.stereotype.Component;
 @Order(20)
 public class CheckAspect {
 
-    @Before("org.example.aop.aspect.MyPointcuts.getAllUniLibraryMethods() || org.example.aop.aspect.MyPointcuts.returnAllUniLibraryMethods() || org.example.aop.aspect.MyPointcuts.addAllUniLibraryMethods()")
+    @Before("org.example.aop.aspect.MyPointcuts.getAllUniLibraryMethods() || org.example.aop.aspect.MyPointcuts.returnAllUniLibraryMethods()" +
+            " || org.example.aop.aspect.MyPointcuts.addAllUniLibraryMethods()")
     public void beforeCheckAdvice(){
         System.out.println("    !beforeCheckAdvice!");
     }

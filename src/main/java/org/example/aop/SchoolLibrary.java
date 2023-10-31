@@ -4,30 +4,31 @@ import org.springframework.stereotype.Component;
 
 @Component()
 public class SchoolLibrary extends abstractLibrary{
-    @Override
-    public void getBook() {
+
+    public void getBook(String user, Book book) {
         System.out.println("getBook from SchoolLibrary");
+        System.out.println("_______________________________");
     }
-    @Override
     public void getMagazine(){
         System.out.println("getMagazine from SchoolLibrary");
+        System.out.println("_______________________________");
     }
-    @Override
     public void returnBook(){
         System.out.println("returnBook from SchoolLibrary");
+        System.out.println("_______________________________");
     }
-    @Override
     public void returnMagazine(){
         System.out.println("returnMagazine from SchoolLibrary");
+        System.out.println("_______________________________");
     }
 
-    @Override
-    public void addBook() {
+    public void addBook(String user, Book book) {
         System.out.println("addBook from SchoolLibrary");
+        System.out.println("_______________________________");
     }
 
-    @Override
     public void addMagazine() {
         System.out.println("addMagazine from SchoolLibrary");
+        System.out.println("_______________________________");
     }
 }
