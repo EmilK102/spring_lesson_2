@@ -27,7 +27,7 @@ public class University {
 //        catch (Exception e){
 //            System.out.println("Выявленно исключение");
 //        }
-        System.out.println(students.get(3));
+        System.out.println(students);
         return students;
     }
 }
