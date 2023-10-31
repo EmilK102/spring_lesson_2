@@ -1,6 +1,7 @@
 package org.example2.aop.aspect;
 
 import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.example2.aop.Student;
@@ -18,13 +19,20 @@ public class UniversityLoggingAspect {
                 "списка студентов перед выполнением метода getStudents");
     }
 
-    @AfterReturning(pointcut = "org.example2.aop.aspect.MyPointcuts.allGetStudentsMethods()",
-    returning = "students")
-    private void afterGetStudentsAdvice(List<Student> students){
-        Student student = new Student("Now", 44, 23.2);
-        students.add(student);
+//    @AfterReturning(pointcut = "org.example2.aop.aspect.MyPointcuts.allGetStudentsMethods()",
+//    returning = "students")
+//    private void afterReturningGetStudentsAdvice(List<Student> students){
+//        Student student = new Student("Now", 44, 23.2);
+//        students.add(student);
+//
+//        System.out.println("afterGetStudentsAdvice: логируем получение " +
+//                "списка студентов после успешного выполнения метода getStudents");
+//    }
 
-        System.out.println("afterGetStudentsAdvice: логируем получение " +
-                "списка студентов после успешного выполнения метода getStudents");
+    @AfterThrowing(pointcut = "org.example2.aop.aspect.MyPointcuts.allGetStudentsMethods()",
+            throwing = "exception")
+    private void afterThrowingGetStudentsAdvice(Throwable exception){
+        System.out.println("beforeGetStudentsAdvice: логируем исключение после неудачнорго выполнения метода getStudents" + exception);
     }
+
 }
